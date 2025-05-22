@@ -1,0 +1,118 @@
+:root {
+  --primary-color: #2ecc71;
+  --primary-dark: #27ae60;
+  --primary-light: #a9dfbf;
+  --text-color: #333;
+  --text-light: #666;
+  --danger-color: #e74c3c;
+  --success-color: #2ecc71;
+  --bg-light: #ffffff;
+  --border-color: #ddd;
+  --border-radius: 8px;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--primary-light);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.screen {
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+}
+
+.register-container {
+  background-color: var(--bg-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.password-requirements {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.password-requirements ul {
+  list-style: none;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.password-requirements li {
+  margin-top: 5px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.password-requirements li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  color: var(--danger-color);
+}
+
+.password-requirements li.valid::before {
+  content: "✓";
+  color: var(--success-color);
+}
+
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--primary-dark);
+}
+
+.login-options a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.login-options a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
